@@ -59,8 +59,9 @@ public class BaseClass {
 		}
 		
 		
-		driver.get(baseURL);
 		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
+		driver.manage().deleteAllCookies();
+		driver.get(baseURL);
 		driver.manage().window().maximize();
 	}
 	
